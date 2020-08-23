@@ -7,7 +7,7 @@ namespace shredFile
     class Program
     {
         public List<string> files = new List<string>();
-        public void todo(string file)
+        public void shred(string file)
         {
             if (File.Exists(file))
             {
@@ -26,7 +26,7 @@ namespace shredFile
                 Console.WriteLine("Shred: " + arg);
                 try
                 {
-                    xx.todo(arg);
+                    xx.shred(arg);
                 }catch(Exception e)
                 {
                     Console.WriteLine("Error in shred file " + arg);
