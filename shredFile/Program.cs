@@ -37,6 +37,7 @@ namespace shredFile
                 Console.WriteLine("Delete: " + arg);
                 File.Delete(arg);
             }
+            Console.WriteLine("Press any Key to exit");
             Console.ReadKey();
         }
     }
