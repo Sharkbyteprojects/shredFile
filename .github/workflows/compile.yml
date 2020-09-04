@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Compiler
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -22,7 +22,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Install Mono
-      - run: |
+        run: |
           sudo apt install gnupg ca-certificates
           sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
           echo "deb https://download.mono-project.com/repo/ubuntu stable-focal main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
@@ -34,3 +34,8 @@ jobs:
           cd shredFile
           csc Program.cs
           mv Program.exe shredFile.exe
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.1.3
+        with:
+          name: shredFile
+          path: shredFile.exe  
