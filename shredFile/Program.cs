@@ -6,6 +6,7 @@ namespace shredFile
 {
     class Program
     {
+        Random random = new Random();
         public List<string> files = new List<string>();
         public void shred(string file)
         {
@@ -14,6 +15,8 @@ namespace shredFile
                 byte[] bytel = File.ReadAllBytes(file);
                 int lengths = bytel.Length;
                 byte[] overrides = new byte[lengths + 80];
+                // USE RANDOM BYTES:
+                random.NextBytes(overrides);
                 File.WriteAllBytes(file, overrides);
                 files.Add(file);
             }
