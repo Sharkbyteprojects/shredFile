@@ -1,6 +1,10 @@
 # Shredder
 Use `shredFile "path to file/file"`
 
+
+## RELEASE NOTES
+- MORE SECURE WITH RANDOM BYTES
+
 ---
 
 For linux/mac download the exe file and install [mono](https://www.mono-project.com/download/stable/) then run it with `mono ./shredFile pathToFile`, if it dosnt work run `chmod +x ./shredFile`
