@@ -20,11 +20,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - name: Install Mono
-        run: |
-          sudo apt update
-          sudo apt install mono-complete
+      #- uses: actions/checkout@v2
+      #- name: Install Mono
+      #  run: |
+      #    sudo apt update
+      #    sudo apt install mono-complete
       # Runs a set of commands using the runners shell
       - name: Compile it!
         run: |
