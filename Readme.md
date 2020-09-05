@@ -2,12 +2,15 @@
 Use `shredFile "path to file/file"`
 
 
-## RELEASE NOTES
+## Changelog Since First release
 - MORE SECURE WITH RANDOM BYTES
 - Add welcome screen
 - Wait `1000` ms before unlink files
 - Write `20` bytes more as the file byte length! <strong>+2 per Iteration!</strong>
 - Repead Shred for `10` Iterations
+
+## DevChangeLog
+- Add `experimental` branch!
 
 ---
 
