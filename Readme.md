@@ -6,7 +6,7 @@ Use `shredFile "path to file/file"`
 - MORE SECURE WITH RANDOM BYTES
 - Add welcome screen
 - Wait `1000` ms before unlink files
-- Write `10` bytes more as the file byte length!
+- Write `20` bytes more as the file byte length! <strong>+2 per Iteration!</strong>
 - Repead Shred for `10` Iterations
 
 ---
