@@ -1,3 +1,4 @@
+<img src="https://fire-engine-icons.github.io/shbyte-logopublishers/sharkbytelogo.svg" height="300">
 # Shredder
 Use `shredFile "path to file/file"`
 
