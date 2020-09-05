@@ -21,8 +21,25 @@ namespace shredFile
                 files.Add(file);
             }
         }
+        static void logo() {
+            string[] logoe = {
+                "##############################################",
+                "#>                                           #",
+                "# >                                          #",
+                "#  >         <c> Sharkbyteprojects           #",
+                "# >                                          #",
+                "#>                                           #",
+                "##############################################",
+                ""
+            };
+            foreach(string logoline in logoe)
+            {
+                Console.WriteLine(logoline);
+            }
+        }
         static void Main(string[] args)
         {
+            logo();
             Program xx = new Program();
             foreach (string arg in args)
             {
