@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 
 namespace shredFile
 {
@@ -52,6 +53,7 @@ namespace shredFile
                     Console.WriteLine("Error in shred file " + arg);
                 }
             }
+            Thread.Sleep(1000);
             foreach(string arg in xx.files)
             {
                 Console.WriteLine("Delete: " + arg);
