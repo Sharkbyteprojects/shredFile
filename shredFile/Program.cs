@@ -9,6 +9,7 @@ namespace shredFile
     {
         Random random = new Random();
         public List<string> files = new List<string>();
+        public bool itl = true;
         public void shred(string file)
         {
             if (File.Exists(file))
@@ -19,7 +20,10 @@ namespace shredFile
                 // USE RANDOM BYTES:
                 random.NextBytes(overrides);
                 File.WriteAllBytes(file, overrides);
-                files.Add(file);
+                if (itl)
+                {
+                    files.Add(file);
+                }
             }
         }
         static void logo()
@@ -62,11 +66,12 @@ namespace shredFile
             {
                 shit(xx, args, (xy + 1));
                 Thread.Sleep(50);
+                xx.itl = false;
             }
             Thread.Sleep(1000);
             foreach (string arg in xx.files)
             {
-                Console.WriteLine("Delete: " + arg);
+                Console.WriteLine("Unlink: " + arg);
                 File.Delete(arg);
             }
             Console.WriteLine("Press any Key to exit");
