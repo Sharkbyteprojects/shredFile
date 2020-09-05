@@ -15,7 +15,7 @@ namespace shredFile
             {
                 byte[] bytel = File.ReadAllBytes(file);
                 int lengths = bytel.Length;
-                byte[] overrides = new byte[lengths + 80];
+                byte[] overrides = new byte[lengths + 10];
                 // USE RANDOM BYTES:
                 random.NextBytes(overrides);
                 File.WriteAllBytes(file, overrides);
