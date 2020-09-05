@@ -9,8 +9,7 @@ namespace shredFile
     {
         Random random = new Random();
         public List<string> files = new List<string>();
-        public bool itl = true;
-        public void shred(string file)
+        public void shred(string file, bool itl)
         {
             if (File.Exists(file))
             {
@@ -45,12 +44,17 @@ namespace shredFile
         }
         static void shit(Program xx, string[] args, int iteration)
         {
+            bool rr = true;
+            if (iteration != 1)
+            {
+                rr = false;
+            }
             foreach (string arg in args)
             {
                 Console.WriteLine("Shred[" + iteration.ToString() + "]: " + arg);
                 try
                 {
-                    xx.shred(arg);
+                    xx.shred(arg, rr);
                 }
                 catch (Exception e)
                 {
@@ -66,7 +70,6 @@ namespace shredFile
             {
                 shit(xx, args, (xy + 1));
                 Thread.Sleep(50);
-                xx.itl = false;
             }
             Thread.Sleep(1000);
             foreach (string arg in xx.files)
