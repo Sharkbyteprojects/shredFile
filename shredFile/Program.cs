@@ -22,7 +22,8 @@ namespace shredFile
                 files.Add(file);
             }
         }
-        static void logo() {
+        static void logo()
+        {
             string[] logoe = {
                 "##############################################",
                 "#>                                           #",
@@ -33,28 +34,37 @@ namespace shredFile
                 "##############################################",
                 ""
             };
-            foreach(string logoline in logoe)
+            foreach (string logoline in logoe)
             {
                 Console.WriteLine(logoline);
+            }
+        }
+        static void shit(Program xx, string[] args, int iteration)
+        {
+            foreach (string arg in args)
+            {
+                Console.WriteLine("Shred[" + iteration.ToString() + "]: " + arg);
+                try
+                {
+                    xx.shred(arg);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error in shred file " + arg);
+                }
             }
         }
         static void Main(string[] args)
         {
             logo();
             Program xx = new Program();
-            foreach (string arg in args)
+            for (int xy = 0; xy < 10; xy++)
             {
-                Console.WriteLine("Shred: " + arg);
-                try
-                {
-                    xx.shred(arg);
-                }catch(Exception e)
-                {
-                    Console.WriteLine("Error in shred file " + arg);
-                }
+                shit(xx, args, (xy + 1));
+                Thread.Sleep(50);
             }
             Thread.Sleep(1000);
-            foreach(string arg in xx.files)
+            foreach (string arg in xx.files)
             {
                 Console.WriteLine("Delete: " + arg);
                 File.Delete(arg);

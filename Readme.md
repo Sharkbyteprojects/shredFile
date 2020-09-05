@@ -7,6 +7,7 @@ Use `shredFile "path to file/file"`
 - Add welcome screen
 - Wait `1000` ms before unlink files
 - Write `10` bytes more as the file byte length!
+- Repead Shred for 10 Iterations
 
 ---
 
