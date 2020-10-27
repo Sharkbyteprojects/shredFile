@@ -40,6 +40,7 @@ namespace shredFile
             foreach (string logoline in logoe)
             {
                 Console.WriteLine(logoline);
+				Thread.Sleep(50);
             }
         }
         static void shit(Program xx, string[] args, int iteration)
