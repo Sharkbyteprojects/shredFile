@@ -74,7 +74,7 @@ namespace shredFile
                         }
                         catch (Exception e)
                         {
-                            Console.WriteLine("Error in shred file " + arg + ".");
+                            Console.WriteLine("Error in shred file " + arg + ". Fail: " + e.Message + ".");
                         }
                     }
                     else
@@ -135,10 +135,13 @@ namespace shredFile
             Program xxx = shredcode(args);
             foreach (string arg in args)
             {
-                FileAttributes attr = File.GetAttributes(arg);
-                if (((attr & FileAttributes.Directory) == FileAttributes.Directory))
+                if (!xxx.files.Contains(arg))
                 {
-                    deldir(arg);
+                    FileAttributes attr = File.GetAttributes(arg);
+                    if (((attr & FileAttributes.Directory) == FileAttributes.Directory))
+                    {
+                        deldir(arg);
+                    }
                 }
             }
             Console.WriteLine("Press any Key to exit");
