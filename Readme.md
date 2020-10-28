@@ -9,6 +9,7 @@ Use `shredFile "path to file/file"`
 - Wait `1000` ms before unlink files
 - Write `20` bytes more as the file byte length! <strong>+2 per Iteration!</strong>
 - Repead Shred for `10` Iterations
+- Can Delete full directorys
 
 ## DevChangeLog
 - Add `experimental` branch!
