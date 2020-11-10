@@ -27,7 +27,7 @@ Use `shredFile "path to file/file"`
 
 For linux/mac download the exe file and install [mono](https://www.mono-project.com/download/stable/) then run it with `mono ./shredFile pathToFile`, if it dosn't work run `chmod +x ./shredFile`
 
-For windows you can download all versions and run it normally
+For windows you can download all versions and run it normally, also you can drag on windows a file on the icon of `shredFile` and the file will be removed!
 
 If you can't run it like a av blocks it, Install mono, download the [program file](https://raw.githubusercontent.com/Sharkbyteprojects/shredFile/master/shredFile/Program.cs) then compile it with `csc Program.cs`. Rename it then to `shredFile`
 
