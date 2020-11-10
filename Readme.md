@@ -17,7 +17,7 @@ Use `shredFile "path to file/file"`
 
 + Repead Shred for 10 Iterations
 
-+ Can Delete full directorys
++ Can Delete full directorys with content, also if it include more directorys
 ```
 
 ## DevChangeLog
