@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Threading;
 
 namespace shredFile
@@ -144,8 +145,10 @@ namespace shredFile
                     }
                 }
             }
-            Console.WriteLine("Press any Key to exit");
-            Console.ReadKey();
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)){
+                Console.WriteLine("Press any Key to exit");
+                Console.ReadKey();
+            }
         }
     }
 }
